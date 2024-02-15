@@ -21,7 +21,7 @@ public class Stapel {
     public Karte pop() {
         if (!this.isEmpty()) {
             Karte poppedKarte = this.top;
-            top = this.top.next;
+            this.top = this.top.next;
             poppedKarte.next = null;
             return poppedKarte;
         }

@@ -5,23 +5,23 @@ public class Stapel {
     }
 
     public Karte top() {
-        return top;
+        return this.top;
     }
 
     public boolean isEmpty() {
-        return top() == null;
+        return this.top() == null;
     }
 
-    public void push(Karte k) {
-        if (!isEmpty())
-            k.next = top;
-        top = k;
+    public void push(Karte karte) {
+        if (!this.isEmpty())
+            karte.next = this.top;
+        this.top = karte;
     }
 
     public Karte pop() {
-        if (!isEmpty()) {
-            Karte poppedKarte = top;
-            top = top.next;
+        if (!this.isEmpty()) {
+            Karte poppedKarte = this.top;
+            top = this.top.next;
             poppedKarte.next = null;
             return poppedKarte;
         }

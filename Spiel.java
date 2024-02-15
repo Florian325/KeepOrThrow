@@ -13,7 +13,7 @@ public class Spiel {
         this.throwStapel = new Stapel();
         Random r = new Random();
         for (int i = 0; i < 10; i++) {
-            this.gemischterStapel.push(new Karte(r.nextInt(11)));
+            this.gemischterStapel.push(new Karte(r.nextInt(15) + 1));
         }
 
     }
